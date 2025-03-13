@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import Job from "./job";
-import { FormattedMessage } from "react-intl";
+import { FormattedMessage, useIntl } from "react-intl";
+import "./jobslist.css";
 
 const JobsList = () => {
+  const intl = useIntl();
+  const isSpanish = intl.locale.startsWith('es');
+  
   const [offers] = useState([
     {
       id: "0001",
@@ -15,7 +19,7 @@ const JobsList = () => {
     },
     {
       id: "0002",
-      name: "Software Engineer",
+      name: <FormattedMessage id="SoftwareEngineer" defaultMessage="Software Engineer" />,
       company: "Google Inc.",
       salary: 20,
       city: "Palo Alto, CA, USA",
@@ -24,7 +28,7 @@ const JobsList = () => {
     },
     {
       id: "0003",
-      name: "Nurse",
+      name: <FormattedMessage id="Nurse" defaultMessage="Nurse" />,
       company: "Clínica La Aurora",
       salary: 1,
       city: "Cali, Colombia",
@@ -36,7 +40,7 @@ const JobsList = () => {
   return (
     <div>
       <table className="table">
-        <thead className="thead-dark">
+        <thead className={isSpanish ? "thead-light" : "thead-dark"}>
           <tr>
             <th scope="col">#</th>
             <th scope="col"><FormattedMessage id="Position" /></th>

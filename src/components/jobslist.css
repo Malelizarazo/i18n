@@ -1,0 +1,17 @@
+.thead-light {
+  background-color: #f8f9fa;
+  color: #212529;
+}
+
+.thead-dark {
+  background-color: #343a40;
+  color: #fff;
+}
+
+.table {
+  margin-top: 20px;
+}
+
+.language-switcher {
+  margin-bottom: 20px;
+}

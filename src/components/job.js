@@ -9,8 +9,8 @@ const Job = (props) => {
       <td>{props.offer.company}</td>
       <td>
         <FormattedMessage
-          id="dgfh"
-          defaultMessage="{number} {number, plural, one {million} other {millions}}"
+          id="SalaryAmount"
+          defaultMessage="{number} {number, plural, one {Million} other {Millions}}"
           values={{
             number: props.offer.salary
           }}
